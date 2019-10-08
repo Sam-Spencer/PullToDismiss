@@ -3,6 +3,7 @@ import PackageDescription
 
 let package = Package(
     name: "PullToDismiss",
+    path: "Sources/",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15)
