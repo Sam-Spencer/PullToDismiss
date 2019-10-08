@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         alphaSlider.addTarget(self, action: #selector(alphaDidChange(_:)), for: .valueChanged)
         dismissableHeightPercentageSlider.addTarget(self, action: #selector(dismissableHeightDidChange(_:)), for: .valueChanged)
         colorTextField.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: .UITextFieldTextDidChange, object: nil)        
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange(_:)), name: UITextField.textDidChangeNotification, object: nil)        
     }
         
     private func update(animated: Bool = false) {
@@ -89,7 +89,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @objc private func textDidChange(_: Notification) {
         if colorTextField.isFirstResponder {
             let text = (colorTextField.text ?? "").replacingOccurrences(of: "#", with: "")
-            if text.characters.count == 6 {
+            if text.count == 6 {
                 Config.shared.backgroundEffect?.color = UIColor(hexString: text, alpha: 1.0)
                 currentColorView.backgroundColor = Config.shared.backgroundEffect?.color
             } else {
@@ -125,14 +125,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 return storyboard.instantiateInitialViewController()!
             case demoButton4:
                 let vc = SampleTableViewController()
-                vc.disissBlock = { [weak self] in
-                    UIView.animate(withDuration: 0.2, animations: { [weak self] in
-                        self?.blurSampleImageView.alpha = 0
-                    }) { [weak self] _ in
+                vc.disissBlock = {
+                    UIView.animate(withDuration: 0.2, animations: { 
+                        self.blurSampleImageView.alpha = 0
+                    }, completion: { _ in
                         Config.shared.backgroundEffect = ShadowEffect.default
                         Config.shared.dismissableHeightPercentage = 0.35
-                        self?.update()
-                    }
+                        self.update()
+                    })
                 }
                 let nav = UINavigationController(rootViewController: vc)
                 if #available(iOS 9.0, *) {
@@ -141,8 +141,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     // Fallback on earlier versions
                 }
                 Config.shared.dismissableHeightPercentage = 0.6
-                UIView.animate(withDuration: 0.2, animations: { [weak self] in
-                    self?.blurSampleImageView.alpha = 1.0
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.blurSampleImageView.alpha = 1.0
                 })
                 return nav
             case demoButton5:

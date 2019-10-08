@@ -26,7 +26,6 @@ open class PullToDismiss: NSObject {
             if let delegate = delegate {
                 delegates.append(delegate)
             }
-            proxy = ScrollViewDelegateProxy(delegates: delegates)
         }
     }
     public var dismissableHeightPercentage: CGFloat = Defaults.dismissableHeightPercentage {
@@ -42,7 +41,7 @@ open class PullToDismiss: NSObject {
 
     private var __scrollView: UIScrollView?
 
-    private var proxy: ScrollViewDelegateProxy? {
+    private var proxy: UIScrollViewDelegate? {
         didSet {
             __scrollView?.delegate = proxy
         }
@@ -62,7 +61,7 @@ open class PullToDismiss: NSObject {
 
     public init(scrollView: UIScrollView, viewController: UIViewController, navigationBar: UIView? = nil) {
         super.init()
-        self.proxy = ScrollViewDelegateProxy(delegates: [self])
+        self.proxy = delegate // ScrollViewDelegateProxy(delegates: [self])
         self.__scrollView = scrollView
         self.__scrollView?.delegate = self.proxy
         self.viewController = viewController
@@ -196,16 +195,14 @@ open class PullToDismiss: NSObject {
             proxy = nil
             _ = dismissAction?() ?? dismiss()
         } else if originY != 0.0 {
-            UIView.perform(.delete, on: [], options: [.allowUserInteraction], animations: { [weak self] in
-                self?.targetViewController?.view.frame.origin.y = 0.0
-                self?.resetBackgroundView()
-                self?.targetViewController?.view.updateEdgeShadow(self?.edgeShadow, rate: 1.0)
-            }) { [weak self] finished in
-                if finished {
-                    self?.deleteBackgroundView()
-                    self?.targetViewController?.view.detachEdgeShadow()
-                }
-            }
+            UIView.perform(.delete, on: [], options: [.allowUserInteraction], animations: {
+                self.targetViewController?.view.frame.origin.y = 0.0
+                self.resetBackgroundView()
+                self.targetViewController?.view.updateEdgeShadow(self.edgeShadow, rate: 1.0)
+            }, completion: { _ in
+                self.deleteBackgroundView()
+                self.targetViewController?.view.detachEdgeShadow()
+            })
         } else {
             self.deleteBackgroundView()
         }

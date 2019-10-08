@@ -17,7 +17,7 @@ extension UIColor {
         self.init(red: r, green: g, blue: b, alpha: alpha)
     }
     convenience init(hexString str: String, alpha: CGFloat) {
-        let range = NSRange(location: 0, length: str.characters.count)
+        let range = NSRange(location: 0, length: str.count)
         let hex = (str as NSString).replacingOccurrences(of: "[^0-9a-fA-F]", with: "", options: .regularExpression, range: range)
         var color: UInt32 = 0
         Scanner(string: hex).scanHexInt32(&color)
@@ -35,7 +35,7 @@ extension CGColor {
     var hexString: String? {
         if let x = self.RGBa {
             let hex = x.red * 0x10000 + x.green * 0x100 + x.blue
-            return NSString(format:"%06x", hex) as String
+            return NSString.init(format: "%06x", hex) as String
         } else {
             return nil
         }

@@ -11,8 +11,6 @@
 		4D19BAD61DDDE49A0027383B /* SampleCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D19BAD51DDDE49A0027383B /* SampleCollectionLayout.swift */; };
 		4D19BAD81DDDE8050027383B /* SampleCustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D19BAD71DDDE8050027383B /* SampleCustomViewController.swift */; };
 		4D19BADA1DDDE80F0027383B /* SampleCustomViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D19BAD91DDDE80F0027383B /* SampleCustomViewController.storyboard */; };
-		4D5A351B1DDB21F100ED9D54 /* PullToDismiss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5A351A1DDB21F100ED9D54 /* PullToDismiss.framework */; };
-		4D5A351C1DDB21F100ED9D54 /* PullToDismiss.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4D5A351A1DDB21F100ED9D54 /* PullToDismiss.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D5A35211DDBFD7200ED9D54 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A35201DDBFD7200ED9D54 /* Config.swift */; };
 		4D9D97C91DF0751400C10C87 /* img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D97C81DF0751400C10C87 /* img.jpg */; };
 		4DB1C4991E6EF167008103D1 /* SampleWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1C4981E6EF167008103D1 /* SampleWebViewController.swift */; };
@@ -32,7 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4D5A351C1DDB21F100ED9D54 /* PullToDismiss.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +41,6 @@
 		4D19BAD51DDDE49A0027383B /* SampleCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCollectionLayout.swift; sourceTree = "<group>"; };
 		4D19BAD71DDDE8050027383B /* SampleCustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleCustomViewController.swift; sourceTree = "<group>"; };
 		4D19BAD91DDDE80F0027383B /* SampleCustomViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SampleCustomViewController.storyboard; sourceTree = "<group>"; };
-		4D5A351A1DDB21F100ED9D54 /* PullToDismiss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PullToDismiss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D5A35201DDBFD7200ED9D54 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		4D9D97C81DF0751400C10C87 /* img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img.jpg; sourceTree = "<group>"; };
 		4DB1C4981E6EF167008103D1 /* SampleWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleWebViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +53,7 @@
 		4DDE880E1DDAA1DC00154B59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DDE88101DDAA1DC00154B59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DE54A281DDD4B4100568F7B /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A616885C234D486600DC7EA3 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +61,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D5A351B1DDB21F100ED9D54 /* PullToDismiss.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +70,6 @@
 		4DDE87F81DDAA1DC00154B59 = {
 			isa = PBXGroup;
 			children = (
-				4D5A351A1DDB21F100ED9D54 /* PullToDismiss.framework */,
 				4DDE88031DDAA1DC00154B59 /* Demo */,
 				4DDE88021DDAA1DC00154B59 /* Products */,
 			);
@@ -91,6 +86,7 @@
 		4DDE88031DDAA1DC00154B59 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				A616885C234D486600DC7EA3 /* Demo.entitlements */,
 				4D9D97C81DF0751400C10C87 /* img.jpg */,
 				4DDE88041DDAA1DC00154B59 /* AppDelegate.swift */,
 				4DDE88061DDAA1DC00154B59 /* ViewController.swift */,
@@ -138,19 +134,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Suguru Kishimoto";
 				TargetAttributes = {
 					4DDE88001DDAA1DC00154B59 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = KW3G83N6K6;
+						DevelopmentTeam = KEQ3L79VAK;
+						LastSwiftMigration = 1110;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 4DDE87FC1DDAA1DC00154B59 /* Build configuration list for PBXProject "Demo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -224,6 +221,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -269,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -283,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -322,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -335,12 +334,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KW3G83N6K6;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = KEQ3L79VAK;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.PullToDismiss.Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samspencer.PullToDismiss.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0.1;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -348,12 +352,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KW3G83N6K6;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				DEVELOPMENT_TEAM = KEQ3L79VAK;
 				INFOPLIST_FILE = Demo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "-.PullToDismiss.Demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.samspencer.PullToDismiss.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0.1;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
