@@ -1,5 +1,10 @@
 # CHANGELOG
 
+### v2.3.0
+- Swift-only version  
+- Swift Package Manager support  
+- macOS Catalyst support  
+
 ### v2.2
 - Swift 5 Support #59
 
