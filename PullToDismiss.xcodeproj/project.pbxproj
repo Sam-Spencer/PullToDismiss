@@ -28,17 +28,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D2F15C21DF2D570000A5172 /* BackgroundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundEffect.swift; sourceTree = "<group>"; };
-		4D5A35181DDB21DB00ED9D54 /* PullToDismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToDismiss.swift; sourceTree = "<group>"; };
+		4D2F15C21DF2D570000A5172 /* BackgroundEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundEffect.swift; path = PullToDismiss/BackgroundEffect.swift; sourceTree = "<group>"; };
+		4D5A35181DDB21DB00ED9D54 /* PullToDismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullToDismiss.swift; path = PullToDismiss/PullToDismiss.swift; sourceTree = "<group>"; };
 		4D870AA11DDAA0CD00575A28 /* PullToDismiss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PullToDismiss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D870AA41DDAA0CD00575A28 /* PullToDismiss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullToDismiss.h; sourceTree = "<group>"; };
 		4D870AA51DDAA0CD00575A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D870AAA1DDAA0CD00575A28 /* PullToDismissTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullToDismissTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D870AAF1DDAA0CD00575A28 /* PullToDismissTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullToDismissTests.swift; sourceTree = "<group>"; };
 		4D870AB11DDAA0CD00575A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D9D97C41DF058C700C10C87 /* CustomBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
-		4DBDB74E1E1F69770068AA1F /* EdgeShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeShadow.swift; sourceTree = "<group>"; };
-		4DBDB7501E1F6FFA0068AA1F /* UIView+EdgeShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+EdgeShadow.swift"; sourceTree = "<group>"; };
+		4D9D97C41DF058C700C10C87 /* CustomBlurView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomBlurView.swift; path = PullToDismiss/CustomBlurView.swift; sourceTree = "<group>"; };
+		4DBDB74E1E1F69770068AA1F /* EdgeShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EdgeShadow.swift; path = PullToDismiss/EdgeShadow.swift; sourceTree = "<group>"; };
+		4DBDB7501E1F6FFA0068AA1F /* UIView+EdgeShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+EdgeShadow.swift"; path = "PullToDismiss/UIView+EdgeShadow.swift"; sourceTree = "<group>"; };
 		A616885A234D43D800DC7EA3 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
